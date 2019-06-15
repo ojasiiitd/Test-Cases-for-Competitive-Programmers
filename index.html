@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Cases</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Major+Mono+Display|Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="CSS/styling.css">
+
+</head>
+<body>
+    <div class="wrapper bg">
+        <div class="container-fluid full">
+            <nav class="navbar bg" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                    <div class="column is-one-fourth title has-text-dark goodtxt">
+                        <i class="fas fa-check has-text-success"></i> TestCaseBuddy
+                    </div>
+                    </a>
+                </div>
+                
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item navend">
+                            <a class="" href="#">
+                                Home
+                            </a>
+                        </div>
+                        <div class="navbar-item navend">
+                            <a class="" href="#">
+                                About
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container ">
+            <div class="title has-text-dark">
+                Please tick the required data types in order of appearance :
+            </div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="int"> Integer
+                    <div class="columns">
+                        <div class="column is-1">
+                            <input class="input is-info" type="text" id="intfrom" placeholder="From">
+                        </div>
+                        <div class="column is-1">
+                            <input class="input is-info" type="text" id="intto" placeholder="To">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="sp-int"> Space Separated Integers
+                    <div class="columns">
+                        <div class="column is-1">
+                            <input class="input is-info" type="text" id="spintfrom" placeholder="From">
+                        </div>
+                        <div class="column is-1">
+                            <input class="input is-info" type="text" id="spintto" placeholder="To">
+                        </div>
+                        <div class="column is-1">
+                            <input class="input is-info" type="text" id="count-val" placeholder="No. of Values">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" id="char"> Character
+                </li>
+                <li>
+                    <input type="checkbox" id="str"> String
+                </li>
+                <li>
+                    <div class="columns">
+                        <div class="column is-3">
+                            <input class="input is-info" type="text" id="tc" placeholder="No. of testcases">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button class="button is-warning is-large">
+                Get TestCases
+            </button>
+            <div class="columns">
+                <div class="column is-1 is-offset-11">
+                    <button class="button is-dark">
+                        Copy
+                    </button>
+                </div>
+            </div>
+            <pre class="fill">
+                
+            </pre>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
