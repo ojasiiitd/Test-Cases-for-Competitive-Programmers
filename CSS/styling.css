@@ -1,0 +1,50 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.bg
+{
+    background-color: rgb(142, 243, 184);
+}
+
+.goodtxt
+{
+    font-family: 'Major Mono Display', monospace;
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+
+.full
+{
+    width: 100%;
+}
+
+.navbar-end a
+{
+    color: rgb(104, 102, 102);
+    text-decoration: underline;
+}
+
+.navbar-end a:hover
+{
+    text-decoration: line-through;
+}
+
+.navend
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.container
+{
+    padding-top: 60px; 
+}
+
+.formfont
+{
+    font-family: 
+}
