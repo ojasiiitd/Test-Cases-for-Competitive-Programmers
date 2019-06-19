@@ -6,6 +6,7 @@
     <title>Test Cases</title>
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Major+Mono+Display|Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="CSS/styling.css">
@@ -32,6 +33,11 @@
                         </div>
                         <div class="navbar-item navend">
                             <a class="" href="#">
+                                Format
+                            </a>
+                        </div>
+                        <div class="navbar-item navend">
+                            <a class="" href="#">
                                 About
                             </a>
                         </div>
@@ -40,62 +46,44 @@
             </nav>
         </div>
         <div class="container ">
-            <div class="title has-text-dark">
-                Please tick the required data types in order of appearance :
+            <div class="title has-text-link">
+                Please read the format carefully before submitting your query.
             </div>
             <ul>
                 <li>
-                    <input type="checkbox" id="int"> Integer
                     <div class="columns">
-                        <div class="column is-1">
-                            <input class="input is-info" type="text" id="intfrom" placeholder="From">
+                        <div class="column is-2">
+                            <label class="is-size-5 has-text-danger">Number of TestCases Required :</label>
                         </div>
-                        <div class="column is-1">
-                            <input class="input is-info" type="text" id="intto" placeholder="To">
+                        <div class="column is-2">
+                            <input class="input is-info" type="text" id="testcases" placeholder="TestCases">
                         </div>
                     </div>
                 </li>
                 <li>
-                    <input type="checkbox" id="sp-int"> Space Separated Integers
                     <div class="columns">
-                        <div class="column is-1">
-                            <input class="input is-info" type="text" id="spintfrom" placeholder="From">
+                        <div class="column is-2">
+                            <label class="is-size-5 has-text-danger">Number of Elements in Each TestCase:</label>
+                        </div>
+                        <div class="column is-2">
+                            <input class="input is-info" type="text" id="elements" placeholder="Number of Elements">
                         </div>
                         <div class="column is-1">
-                            <input class="input is-info" type="text" id="spintto" placeholder="To">
-                        </div>
-                        <div class="column is-1">
-                            <input class="input is-info" type="text" id="count-val" placeholder="No. of Values">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <input type="checkbox" id="char"> Character
-                </li>
-                <li>
-                    <input type="checkbox" id="str"> String
-                </li>
-                <li>
-                    <div class="columns">
-                        <div class="column is-3">
-                            <input class="input is-info" type="text" id="tc" placeholder="No. of testcases">
+                            <input class="button is-link" type="submit" id="input_boxes">
                         </div>
                     </div>
                 </li>
             </ul>
-            <button class="button is-warning is-large">
+            <button id="submit" class="button is-warning is-large">
                 Get TestCases
             </button>
-            <div class="columns">
-                <div class="column is-1 is-offset-11">
-                    <button class="button is-dark">
-                        Copy
-                    </button>
+            <article class="message is-dark">
+                <div class="message-header">
+                    <p>Your TestCases :</p>
+                    <button class="button copytc is-size-5 is-danger"><i class="fas fa-copy"></i></button>
                 </div>
-            </div>
-            <pre class="fill">
-                
-            </pre>
+                <input type="textarea" class="textarea">
+            </article>
         </div>
     </div>
 
