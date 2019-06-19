@@ -68,9 +68,19 @@
                         <div class="column is-2">
                             <input class="input is-info" type="text" id="elements" placeholder="Number of Elements">
                         </div>
-                        <div class="column is-1">
-                            <input class="button is-link" type="submit" id="input_boxes">
+                        <div class="column is-2">
+                            <button class="button is-link" id="input_boxes">
+                                Submit
+                            </button>
+                            <button class="button is-primary" id="reset">
+                                <i class="fas fa-redo"></i>
+                            </button>
                         </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="columns">
+                        <div class="column is-2" id="parentDiv"></div>
                     </div>
                 </li>
             </ul>
@@ -82,7 +92,7 @@
                     <p>Your TestCases :</p>
                     <button class="button copytc is-size-5 is-danger"><i class="fas fa-copy"></i></button>
                 </div>
-                <input type="textarea" class="textarea">
+                <input type="textarea" class="textarea code-color">
             </article>
         </div>
     </div>
