@@ -43,3 +43,15 @@
 {
     padding-top: 60px; 
 }
+
+#added-boxes
+{
+    margin-top: 8px;
+}
+
+.textarea.code-color
+{
+    background-color: gainsboro;
+    font-size: 17px;
+    font-family: 'IBM Plex Mono', monospace;
+}
