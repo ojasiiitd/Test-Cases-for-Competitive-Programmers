@@ -49,7 +49,17 @@
     margin-top: 8px;
 }
 
-.textarea.code-color
+.message-header
+{
+    margin-top: 30px;
+}
+
+#answer
+{
+    min-height: 300px;
+}
+
+.message-body.code-color
 {
     background-color: gainsboro;
     font-size: 17px;
@@ -76,7 +86,7 @@
     font-size: 25px;
 }
 
-pre
+.pre-format
 {
     font-size: 16px;
     text-align: left;
