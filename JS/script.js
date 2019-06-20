@@ -28,6 +28,10 @@ function createInputs()
         var boxlist = document.getElementById("parentDiv");
         boxlist.appendChild(input);
     }
+
+    // focus on first created box after click
+    var focus_one = document.querySelector("#added-boxes");
+    focus_one.focus();
 }
 
 // to remove all boxes in case of error
@@ -58,29 +62,29 @@ function generate()
 
     // getting info from all created boxes
     var newBoxes = document.querySelectorAll("#added-boxes");
-    for(var i=0 ; i<newBoxes.length ; i++)
+    for(var test=0 ; test<test_case_number ; test++)
     {
-        // text inserted as per format converted to lowercase
-        // and making a list by splitting
-        var code = newBoxes[i].value.toLowerCase().split(" ");
-        console.log(code);
-
-        // getting all elements by value
-        var type = code[0],
-            lowerBound = parseInt(code[1]) || -1,
-            upperBound = parseInt(code[2])+1 || -1,
-            times = parseInt(code[3]) || 0;
-
-        // debug
-        console.log(type , lowerBound , upperBound , times);
-
-        // to paste testcases here
-        var answer = document.getElementById("answer");
-        answer.value = "";
-        
-        // test_case_number times generation
-        for(var test=0 ; test<test_case_number ; test++)
+        for(var i=0 ; i<newBoxes.length ; i++)
         {
+            // text inserted as per format converted to lowercase
+            // and making a list by splitting
+            var code = newBoxes[i].value.toLowerCase().split(" ");
+            console.log(code);
+
+            // getting all elements by value
+            var type = code[0],
+                lowerBound = parseInt(code[1]) || -1,
+                upperBound = parseInt(code[2])+1 || -1,
+                times = parseInt(code[3]) || 0;
+
+            // debug
+            console.log(type , lowerBound , upperBound , times);
+
+            // to paste testcases here
+            var answer = document.getElementById("answer");
+            answer.textContent = test_case_number + "\n";
+            
+            // test_case_number times generation
             // used to add stuff to final testcases
             var add;
             if(type === "int")
@@ -115,7 +119,7 @@ function generate()
                 var intelt = "";
                 for(var j=0 ; j<times ; j++)
                     intelt += (String(getRandomNumber(lowerBound , upperBound)) + " ");
-                add = (intelt + "\n");
+                add = intelt;
             }
             else if(type === "string")
             {
@@ -130,7 +134,7 @@ function generate()
                     len = getRandomNumber(lowerBound , upperBound);
                 for(var j=0 ; j<len ; j++)
                     strelt += getRandomChar();
-                add = (strelt + "\n");
+                add = strelt;
             }
             else
             {
@@ -145,7 +149,7 @@ function generate()
     console.log(testcases);
     
     // show on the page
-    answer.value += (testcases + "\n");
+    answer.textContent += (testcases);
 }
 
 // handling errors
@@ -170,4 +174,31 @@ function getRandomChar()
     var random_index = getRandomNumber(0 , 25);
     var random_char = alpha.charAt(random_index);
     return random_char;
+}
+
+// copy function
+var copy = document.getElementById("copytc");
+
+// to copy the testcases
+copy.addEventListener("click" , clipTestCases);
+function clipTestCases()
+{
+    var answer = document.getElementById("answer");
+    var copied = answer.textContent;
+
+     // Create new element
+     var el = document.createElement('textarea');
+     el.value = copied;
+
+     console.log(el.value);
+
+     // setting to read-only
+     el.setAttribute('readonly', '');
+     el.style = {position: 'absolute', left: '-9999px'};
+     document.body.appendChild(el);
+
+     // select, copy and remove the element
+     el.select();
+     document.execCommand('copy');
+     document.body.removeChild(el);
 }
